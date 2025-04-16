@@ -7,15 +7,13 @@
 import CoreBluetooth
 import os
 
-extension Data {
-    var bytes: [UInt8] {
-        var byteArray = [UInt8](repeating: 0, count: self.count)
-        self.copyBytes(to: &byteArray, count: self.count)
-        return byteArray
-    }
+enum BeepType: UInt8 {
+    case short
+    case long
+    case long2
 }
 
-class Radar: NSObject, CBPeripheralDelegate {
+class Radar: NSObject {
     let peripheral: CBPeripheral!
     var readCharacteristic: CBCharacteristic?
     var writeCharacteristic: CBCharacteristic?
@@ -60,7 +58,14 @@ class Radar: NSObject, CBPeripheralDelegate {
         peripheral.writeValue(data, for: writeCharacteristic, type: .withResponse)
     }
     
-    private func handlePacket(data: [UInt8]) {
+    func beep(type: BeepType) {
+        let data = Data([0xF5, 0x02, 0x9B, type.rawValue])
+        peripheral.writeValue(data, for: writeCharacteristic!, type: .withResponse)
+    }
+    
+    //MARK: Packet Handling
+    
+    func handlePacket(data: [UInt8]) {
         let commandByte = data[2]
         let length = data[1]
         
@@ -82,72 +87,13 @@ class Radar: NSObject, CBPeripheralDelegate {
         
         if(commandByte == 0xA3) {
             logger.info("Detector unlocked")
-            var data = Data([0xF5, 0x02, 0x9B, 0x01])
+            let data = Data([0xF5, 0x02, 0x9B, 0x01])
             peripheral.writeValue(data, for: writeCharacteristic!, type: .withResponse)
         }
         
         if(commandByte == 0xA7) {
             logger.info("Detector unlocked")
-            var data = Data([0xF5, 0x02, 0x9B, 0x01])
-            peripheral.writeValue(data, for: writeCharacteristic!, type: .withResponse)
-        }
-    }
-    
-    //MARK: CBPeripheralDelegate
-    
-    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: (any Error)?) {
-        guard let services = peripheral.services else { return }
-        
-        for service in services {
-            if service.uuid == serviceUUID {
-                peripheral.discoverCharacteristics([writeUUID, readUUID], for: service)
-            }
-        }
-    }
-    
-    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: (any Error)?) {
-        guard let characteristics = service.characteristics else { return }
-        
-        for characteristic in characteristics {
-            logger.info("char \(characteristic.uuid.uuidString)")
-            if characteristic.uuid == writeUUID {
-                self.writeCharacteristic = characteristic
-            } else if characteristic.uuid == readUUID {
-                self.readCharacteristic = characteristic
-                peripheral.setNotifyValue(true, for: characteristic)
-            }
-        }
-        
-        sendStatusRequest()
-    }
-    
-    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: (any Error)?) {
-        if(error != nil) {
-            logger.error("error \(String(describing: error))")
-            return
-        }
-        
-        if(characteristic.uuid == readUUID && characteristic.value != nil) {
-            let data = characteristic.value!
-            let array = data.bytes
             
-            logger.info("Data payload: \(array), count: \(data.count), len: \(array[1])")
-            
-            //validate
-            if(array[0] != 0xF5 || data.count - 2 != array[1]) {
-                return
-            }
-            
-            handlePacket(data: array)
         }
-    }
-    
-    func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: (any Error)?) {
-        if(error != nil) {
-            logger.error("error \(String(describing: error))")
-            return
-        }
-        
-        logger.info("wrote to \(characteristic.uuid.uuidString)")
     }
 }

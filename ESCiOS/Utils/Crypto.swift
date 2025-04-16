@@ -9,7 +9,6 @@ import Foundation
 import os
 
 class EscortCrypto: NSObject {
-    var logger = Logger(subsystem: "ESCLib", category: "Crypto")
     let SMARTCORD_KEY: [UInt32] = [0xB67423AB, 0x7B7F599E, 0x831E63EB, 0x535C1285]
     
     func xteaEncrypt(rounds: Int, v: [UInt32], key: [UInt32]) -> [UInt32] {
@@ -69,8 +68,8 @@ class EscortCrypto: NSObject {
     }
     
     func perform_crypto(unlock_payload: [UInt8]) -> [UInt8] {
-        var packed = esc_pack(escReq: unlock_payload);
-        var crypt = xteaEncrypt(rounds: 35, v: packed, key: SMARTCORD_KEY);
+        let packed = esc_pack(escReq: unlock_payload);
+        let crypt = xteaEncrypt(rounds: 35, v: packed, key: SMARTCORD_KEY);
         return esc_unpack(vv: crypt)
     }
     

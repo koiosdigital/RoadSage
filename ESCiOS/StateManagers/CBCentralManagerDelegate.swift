@@ -11,19 +11,15 @@ extension BluetoothManager: CBCentralManagerDelegate {
     //MARK: CentralManagerDelegate
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if(central.state == .poweredOn) {
-            logger.info("cb power on!");
             attemptConnection()
         } else if(central.state == .unauthorized) {
-            logger.info("cb unauthorized!");
             state = .bt_unauthorized
         } else {
-            logger.info("cb unavailable!");
             state = .bt_unavailable
         }
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        logger.info("periph \(peripheral.name!) connected!")
         discoveredPeripherals = []
         connectedPeripheral = peripheral
         state = .connected
@@ -51,11 +47,9 @@ extension BluetoothManager: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, timestamp: CFAbsoluteTime, isReconnecting: Bool, error: Error?) {
         guard (peripheral.name != nil) else {
-            logger.error("didDisconnectPeripheral called w/ invalid peripheral!");
             return
         }
         
-        logger.info("periph \(peripheral.name!) disconnected");
         state = .disconnected
         self.cbCM.connect(peripheral, options: ["CBConnectPeripheralEnableAutoReconnect":true])
         

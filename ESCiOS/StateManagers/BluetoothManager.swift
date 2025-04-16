@@ -27,7 +27,6 @@ enum BluetoothManagerState {
 class BluetoothManager: NSObject, ObservableObject {
     
     var cbCM: CBCentralManager!
-    var logger = Logger(subsystem: "BLE", category: "BluetoothManager")
     var userDefaults = UserDefaults.standard
     var backgroundActivity: BackgroundActivity!
     
@@ -40,8 +39,6 @@ class BluetoothManager: NSObject, ObservableObject {
     
     override init() {
         super.init()
-        
-        logger.info("init called")
         cbCM = CBCentralManager(delegate: self, queue: nil)
         cbCM.delegate = self
         backgroundActivity = BackgroundActivity(bluetoothManager: self)
@@ -62,13 +59,11 @@ class BluetoothManager: NSObject, ObservableObject {
         //Check if we have a saved device.
         let savedPeripherals = userDefaults.value(forKey: "savedPeripherals") as? [String];
         if(savedPeripherals?.isEmpty ?? true) {
-            logger.warning("savedPeripherals empty!")
             state = .not_setup
         } else {
             let thisPeripheral = cbCM.retrievePeripherals(withIdentifiers: [UUID(uuidString: savedPeripherals!.first!)!])
             guard let peripheral = thisPeripheral.first else {
                 state = .not_setup
-                logger.warning("could not retrieve savedperipheral!")
                 userDefaults.setValue([], forKey: "savedPeripherals")
                 return
             }
