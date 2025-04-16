@@ -7,8 +7,8 @@
 		<string>remote-notification</string>
 		<string>bluetooth-central</string>
 		<string>location</string>
-		<string>processing</string>
 		<string>fetch</string>
+		<string>processing</string>
 	</array>
 </dict>
 </plist>

@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		DFAF16D02DAEFF0700C5BAA3 /* ESCiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESCiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFEBEA702DB04E5E001FA16D /* RoadSage: Driving Alerts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RoadSage: Driving Alerts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DFAF16F22DAEFF0900C5BAA3 /* Exceptions for "ESCiOS" folder in "ESCiOS" target */ = {
+		DFEBEABE2DB050AA001FA16D /* Exceptions for "RoadSage" folder in "RoadSage" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = DFAF16CF2DAEFF0700C5BAA3 /* ESCiOS */;
+			target = DFEBEA6F2DB04E5E001FA16D /* RoadSage */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DFAF16D12DAEFF0700C5BAA3 /* ESCiOS */ = {
+		DFEBEA712DB04E5E001FA16D /* RoadSage */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				DFAF16F22DAEFF0900C5BAA3 /* Exceptions for "ESCiOS" folder in "ESCiOS" target */,
+				DFEBEABE2DB050AA001FA16D /* Exceptions for "RoadSage" folder in "RoadSage" target */,
 			);
-			path = ESCiOS;
+			path = RoadSage;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DFAF16CD2DAEFF0700C5BAA3 /* Frameworks */ = {
+		DFEBEA6D2DB04E5E001FA16D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,8 +45,7 @@
 		DF31F1292B02CC65006A47F4 = {
 			isa = PBXGroup;
 			children = (
-				DFAF16CB2DAEFEE000C5BAA3 /* New Group */,
-				DFAF16D12DAEFF0700C5BAA3 /* ESCiOS */,
+				DFEBEA712DB04E5E001FA16D /* RoadSage */,
 				DF31F1312B02CC65006A47F4 /* Products */,
 				DF93101E2B072678003869D5 /* Frameworks */,
 			);
@@ -55,7 +54,7 @@
 		DF31F1312B02CC65006A47F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFAF16D02DAEFF0700C5BAA3 /* ESCiOS.app */,
+				DFEBEA702DB04E5E001FA16D /* RoadSage: Driving Alerts.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,36 +66,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DFAF16CB2DAEFEE000C5BAA3 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DFAF16CF2DAEFF0700C5BAA3 /* ESCiOS */ = {
+		DFEBEA6F2DB04E5E001FA16D /* RoadSage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFAF16F32DAEFF0900C5BAA3 /* Build configuration list for PBXNativeTarget "ESCiOS" */;
+			buildConfigurationList = DFEBEA7D2DB04E5F001FA16D /* Build configuration list for PBXNativeTarget "RoadSage" */;
 			buildPhases = (
-				DFAF16CC2DAEFF0700C5BAA3 /* Sources */,
-				DFAF16CD2DAEFF0700C5BAA3 /* Frameworks */,
-				DFAF16CE2DAEFF0700C5BAA3 /* Resources */,
+				DFEBEA6C2DB04E5E001FA16D /* Sources */,
+				DFEBEA6D2DB04E5E001FA16D /* Frameworks */,
+				DFEBEA6E2DB04E5E001FA16D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DFAF16D12DAEFF0700C5BAA3 /* ESCiOS */,
+				DFEBEA712DB04E5E001FA16D /* RoadSage */,
 			);
-			name = ESCiOS;
+			name = RoadSage;
 			packageProductDependencies = (
 			);
-			productName = ESCiOS;
-			productReference = DFAF16D02DAEFF0700C5BAA3 /* ESCiOS.app */;
+			productName = RoadSage;
+			productReference = DFEBEA702DB04E5E001FA16D /* RoadSage: Driving Alerts.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,12 +101,12 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
-					DFAF16CF2DAEFF0700C5BAA3 = {
+					DFEBEA6F2DB04E5E001FA16D = {
 						CreatedOnToolsVersion = 16.3;
 					};
 				};
 			};
-			buildConfigurationList = DF31F12D2B02CC65006A47F4 /* Build configuration list for PBXProject "EscortBLE" */;
+			buildConfigurationList = DF31F12D2B02CC65006A47F4 /* Build configuration list for PBXProject "RoadSage" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -129,13 +121,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DFAF16CF2DAEFF0700C5BAA3 /* ESCiOS */,
+				DFEBEA6F2DB04E5E001FA16D /* RoadSage */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DFAF16CE2DAEFF0700C5BAA3 /* Resources */ = {
+		DFEBEA6E2DB04E5E001FA16D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -145,7 +137,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DFAF16CC2DAEFF0700C5BAA3 /* Sources */ = {
+		DFEBEA6C2DB04E5E001FA16D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,83 +267,103 @@
 			};
 			name = Release;
 		};
-		DFAF16F42DAEFF0900C5BAA3 /* Debug */ = {
+		DFEBEA7E2DB04E5F001FA16D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ESCiOS/ESCiOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RoadSage/RoadSage.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9R8RREG67J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ESCiOS/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSBluetoothWhileInUseUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Communicate with Radar";
+				INFOPLIST_FILE = RoadSage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RoadSage;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect and communicate with supported alert display devices";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Connect and communicate with supported alert display devices";
+				INFOPLIST_KEY_NSBluetoothWhileInUseUsageDescription = "Connect and communicate with supported alert display devices";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Koios Digital";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Fetch nearby alerts to display on supported devices";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Fetch nearby alerts to display on supported devices";
+				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "Fetch nearby alerts to display on supported devices";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Fetch nearby alerts to display on supported devices";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Fetch nearby alerts to display on supported devices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.koiosdigital.ESCiOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.koiosdigital.RoadSage;
+				PRODUCT_NAME = "$(TARGET_NAME): Driving Alerts";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		DFAF16F52DAEFF0900C5BAA3 /* Release */ = {
+		DFEBEA7F2DB04E5F001FA16D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ESCiOS/ESCiOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RoadSage/RoadSage.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9R8RREG67J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ESCiOS/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSBluetoothWhileInUseUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationUsageDescription = "Communicate with Radar";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Communicate with Radar";
+				INFOPLIST_FILE = RoadSage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RoadSage;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect and communicate with supported alert display devices";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Connect and communicate with supported alert display devices";
+				INFOPLIST_KEY_NSBluetoothWhileInUseUsageDescription = "Connect and communicate with supported alert display devices";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Koios Digital";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Fetch nearby alerts to display on supported devices";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Fetch nearby alerts to display on supported devices";
+				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "Fetch nearby alerts to display on supported devices";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Fetch nearby alerts to display on supported devices";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Fetch nearby alerts to display on supported devices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.koiosdigital.ESCiOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.koiosdigital.RoadSage;
+				PRODUCT_NAME = "$(TARGET_NAME): Driving Alerts";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -359,7 +371,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DF31F12D2B02CC65006A47F4 /* Build configuration list for PBXProject "EscortBLE" */ = {
+		DF31F12D2B02CC65006A47F4 /* Build configuration list for PBXProject "RoadSage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF31F15A2B02CC67006A47F4 /* Debug */,
@@ -368,11 +380,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFAF16F32DAEFF0900C5BAA3 /* Build configuration list for PBXNativeTarget "ESCiOS" */ = {
+		DFEBEA7D2DB04E5F001FA16D /* Build configuration list for PBXNativeTarget "RoadSage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFAF16F42DAEFF0900C5BAA3 /* Debug */,
-				DFAF16F52DAEFF0900C5BAA3 /* Release */,
+				DFEBEA7E2DB04E5F001FA16D /* Debug */,
+				DFEBEA7F2DB04E5F001FA16D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

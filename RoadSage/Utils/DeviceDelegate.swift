@@ -1,5 +1,5 @@
-// Radar.swift
-//  ESCiOS
+// EscortRadarDelegate.swift
+// ESCiOS
 //
 // Copyright 2025 - Koios Digital, LLC
 //
@@ -7,13 +7,13 @@
 import CoreBluetooth
 import os
 
-extension Radar: CBPeripheralDelegate {
+extension Device: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: (any Error)?) {
         guard let services = peripheral.services else { return }
         
         for service in services {
-            if service.uuid == serviceUUID {
-                peripheral.discoverCharacteristics([writeUUID, readUUID], for: service)
+            if service.uuid == self.serviceUUID {
+                peripheral.discoverCharacteristics([self.writeCharacteristicUUID, self.readCharacteristicUUID], for: service)
             }
         }
     }
@@ -22,43 +22,31 @@ extension Radar: CBPeripheralDelegate {
         guard let characteristics = service.characteristics else { return }
         
         for characteristic in characteristics {
-            logger.info("char \(characteristic.uuid.uuidString)")
-            if characteristic.uuid == writeUUID {
+            if characteristic.uuid == self.writeCharacteristicUUID {
                 self.writeCharacteristic = characteristic
-            } else if characteristic.uuid == readUUID {
+            } else if characteristic.uuid == self.readCharacteristicUUID {
                 self.readCharacteristic = characteristic
                 peripheral.setNotifyValue(true, for: characteristic)
             }
         }
         
-        sendStatusRequest()
+        initializeCommunications()
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: (any Error)?) {
         if(error != nil) {
-            logger.error("error \(String(describing: error))")
             return
         }
         
-        if(characteristic.uuid == readUUID && characteristic.value != nil) {
+        if(characteristic.uuid == self.readCharacteristicUUID && characteristic.value != nil) {
             let data = characteristic.value!
-            let array = data.bytes
 
-            //validate
-            if(array[0] != 0xF5 || data.count - 2 != array[1]) {
+            if(!validatePacket(data: data.bytes)) {
+                logger.warning("Packet invalid: \(data.bytes)")
                 return
             }
             
-            handlePacket(data: array)
+            handlePacket(data: data.bytes)
         }
-    }
-    
-    func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: (any Error)?) {
-        if(error != nil) {
-            logger.error("error \(String(describing: error))")
-            return
-        }
-        
-        logger.info("wrote to \(characteristic.uuid.uuidString)")
     }
 }

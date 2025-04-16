@@ -47,8 +47,6 @@ class BackgroundActivity: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        logger.info("Location manager did change authorization to \(manager.authorizationStatus.rawValue)")
-        
         if(manager.authorizationStatus == .authorizedAlways) {
             startLocation()
         } else {

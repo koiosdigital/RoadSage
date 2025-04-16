@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DFAF16CF2DAEFF0700C5BAA3"
-               BuildableName = "ESCiOS.app"
-               BlueprintName = "ESCiOS"
-               ReferencedContainer = "container:EscortBLE.xcodeproj">
+               BlueprintIdentifier = "DFEBEA6F2DB04E5E001FA16D"
+               BuildableName = "RoadSage.app"
+               BlueprintName = "RoadSage"
+               ReferencedContainer = "container:RoadSage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,30 +29,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DFAF16DF2DAEFF0900C5BAA3"
-               BuildableName = "ESCiOSTests.xctest"
-               BlueprintName = "ESCiOSTests"
-               ReferencedContainer = "container:EscortBLE.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DFAF16E92DAEFF0900C5BAA3"
-               BuildableName = "ESCiOSUITests.xctest"
-               BlueprintName = "ESCiOSUITests"
-               ReferencedContainer = "container:EscortBLE.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -68,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DFAF16CF2DAEFF0700C5BAA3"
-            BuildableName = "ESCiOS.app"
-            BlueprintName = "ESCiOS"
-            ReferencedContainer = "container:EscortBLE.xcodeproj">
+            BlueprintIdentifier = "DFEBEA6F2DB04E5E001FA16D"
+            BuildableName = "RoadSage.app"
+            BlueprintName = "RoadSage"
+            ReferencedContainer = "container:RoadSage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -85,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DFAF16CF2DAEFF0700C5BAA3"
-            BuildableName = "ESCiOS.app"
-            BlueprintName = "ESCiOS"
-            ReferencedContainer = "container:EscortBLE.xcodeproj">
+            BlueprintIdentifier = "DFEBEA6F2DB04E5E001FA16D"
+            BuildableName = "RoadSage.app"
+            BlueprintName = "RoadSage"
+            ReferencedContainer = "container:RoadSage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

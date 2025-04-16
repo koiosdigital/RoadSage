@@ -35,7 +35,7 @@ class BluetoothManager: NSObject, ObservableObject {
     @Published var discoveredPeripherals: [CBPeripheral] = [];
     @Published var state: BluetoothManagerState = .powered_off;
     var connectedPeripheral: CBPeripheral? = nil;
-    var connectedRadar: Radar? = nil;
+    var connectedDevice: Device? = nil;
     
     override init() {
         super.init()

@@ -31,7 +31,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
             UserDefaults.standard.set(savedPeripherals + [UUIDStr], forKey: "savedPeripherals")
         }
         
-        connectedRadar = Radar(peripheral: peripheral)
+        connectedDevice = EscortRadar(peripheral: peripheral, serviceUUID: escortBLEServiceUUID, readCharacteristicUUID: escortBLErxCharacteristicUUID, writeCharacteristicUUID: escortBLEtxCharacteristicUUID)
         
         //start background activity
         backgroundActivity.start()
@@ -53,7 +53,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
         state = .disconnected
         self.cbCM.connect(peripheral, options: ["CBConnectPeripheralEnableAutoReconnect":true])
         
-        connectedRadar = nil
+        connectedDevice = nil
         
         //end background activity
         backgroundActivity.end()
